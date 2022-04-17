@@ -1,0 +1,36 @@
+***** NOTES ON PATH PROCESS: *****
+
+We receive a request param which is the id
+That id specifies which user we are going to update
+We use the find method to search for the user in the array of all users
+
+Once we find the specific user, we save in a user variable for use within our program
+
+The request body will have properties that match the user object, since we are sending this information from the front end to update the user
+
+If the values that we are sending from the front end match any of the values on the user object, then we replace the existing value with the updated value
+
+Name your router's crud operations based on their crud/http action to make it simple and intuitive
+
+*** FILE SYSTEM ***
+For this type of project, it is useful to separate your server, your routing and your methods into separate files to keep you code clean
+
+The typical file system may look something like this: 
+
+... your main app ...
+
++- controllers --> This is where your router methods live
+    |
+    +-- users.js 
+
++- routes --> This is where your actual routes are set up
+    |
+    +-- users.js
+
++- index.js --> This is where your server for the entire app lives
+
+Your routes and controller files can share the same name, since they live in separate folders, they should also be named in accordance with their purpose - in the case of user profiles as an example, when you would want to name your routes and controllers with a name denoting users
+
+YOUTUBE RESOURCE:
+
+https://www.youtube.com/watch?v=l8WPWK9mS5M&list=PLL6Avvc5u_n-eYPGM7Aks0IyySX24cXu1&index=3&ab_channel=JavaScriptMastery
